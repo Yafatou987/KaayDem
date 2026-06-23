@@ -12,3 +12,6 @@ interface RepositoryInterface
 
     public function delete($id);
 }
+require_once '../config/Database.php';
+
+$pdo = Database::connect();
