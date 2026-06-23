@@ -1,6 +1,6 @@
 <?php
 
-class Utilisateur
+ abstract class Utilisateur 
 {
     private int $id;
     private string $nom;
