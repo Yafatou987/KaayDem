@@ -11,17 +11,15 @@ class Database
     {
         try {
             $pdo = new PDO(
-                "mysql:host=" . self::$host . ";dbname=" . self::$dbname . ";charset=utf8",
-                self::$username,
-                self::$password
+                "mysql:host=localhost;dbname=kaaydem;charset=utf8",
+                "root",
+                ""
             );
-
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             return $pdo;
 
         } catch (PDOException $e) {
-            die("Erreur de connexion : " . $e->getMessage());
+            die($e->getMessage());
         }
     }
 }
